@@ -5,7 +5,6 @@ jdk:
 branches:
   except:
     - gh-pages
-
 env:
   global:
     - GH_REPO_NAME: QuickSortIntegracion
@@ -17,7 +16,6 @@ addons:
     packages:
       - doxygen
       - doxygen-doc
-      - doxygen-latex
       - doxygen-gui
       - graphviz
 
@@ -29,4 +27,4 @@ after_success:
   - cd $TRAVIS_BUILD_DIR
   - ls
   - chmod +x generacionDocDespliegue.sh
-  - ./generateDocumentationAndDeploy.sh
+  - ./generacionDocDespliegue.sh
