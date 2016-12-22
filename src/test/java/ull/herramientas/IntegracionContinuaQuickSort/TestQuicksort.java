@@ -31,6 +31,8 @@ public class TestQuicksort
 	@Test
 	public void arraysDistinto()
 	{
+		if(arrayDesordenado != arrayOrdenado)
+			quick.sort(arrayDesordenado);
 		assertArrayEquals(arrayDesordenado, arrayOrdenado);
 	}
 	/**
