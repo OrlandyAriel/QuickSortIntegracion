@@ -10,7 +10,7 @@ env:
   global:
     - GH_REPO_NAME: QuickSortIntegracion
     - DOXYFILE: $TRAVIS_BUILD_DIR/DocumentacionQuickSort
-    - GH_REPO_REF: https://github.com/alu0100773408/QuickSortIntegracion
+    - GH_REPO_REF: github.com/alu0100773408/QuickSortIntegracion
 # Instalación de dependencias.
 addons:
   apt:
