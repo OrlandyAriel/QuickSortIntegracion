@@ -11,12 +11,14 @@ env:
     - GH_REPO_NAME: QuickSortIntegracion
     - DOXYFILE: $TRAVIS_BUILD_DIR/DocumentacionQuickSort
     - GH_REPO_REF: github.com/alu0100773408/QuickSortIntegracion
+    - secure: 33eac56cb972501d156af49b0c246ecdd9d503ba
 # Instalación de dependencias.
 addons:
   apt:
     packages:
       - doxygen
       - doxygen-doc
+      - doxygen-latex
       - doxygen-gui
       - graphviz
 
