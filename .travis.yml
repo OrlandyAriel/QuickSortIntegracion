@@ -23,6 +23,7 @@ addons:
 script: 
 - mvn clean verify
 - mvn install
+- mvn doxygen:report
 #- mvn javadoc:javadoc
 after_success:
   - cd $TRAVIS_BUILD_DIR
