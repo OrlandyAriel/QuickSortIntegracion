@@ -1,0 +1,32 @@
+language: java
+sudo: false
+jdk:
+  - oraclejdk8
+branches:
+  except:
+    - gh-pages
+
+env:
+  global:
+    - GH_REPO_NAME: QuickSortIntegracion
+    - DOXYFILE: $TRAVIS_BUILD_DIR/DocumentacionQuickSort
+    - GH_REPO_REF: https://github.com/alu0100773408/QuickSortIntegracion
+# Instalación de dependencias.
+addons:
+  apt:
+    packages:
+      - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
+
+script: 
+- mvn clean verify
+- mvn install
+#- mvn javadoc:javadoc
+after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - ls
+  - chmod +x generacionDocDespliegue.sh
+  - ./generateDocumentationAndDeploy.sh
