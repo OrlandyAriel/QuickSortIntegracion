@@ -1,8 +1,8 @@
 package ull.herramientas.IntegracionContinuaQuickSort;
 /**
- * Clase Quicksort
+ * \class Quicksort
  * \breif esta clase utiliza el algoritmo Quicksort para ordenar arrays de números enteros.
- * @author Orlandy Ariel Sánchez A.
+ * \author Orlandy Ariel Sánchez A.
  *
  */
 public class Quicksort  {
@@ -33,7 +33,7 @@ public class Quicksort  {
 	private void quicksort(int low, int high) {
 
 		int i = low, j = high;
-		// Get the pivot element from the middle of the list
+		// obtiene el pivote de la lista, será el el que esté en la mitad
 		int pivot = numbers[low + (high-low) / 2];
 		//Divide la lista en 2.
 		while (i <= j) {
